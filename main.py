@@ -100,28 +100,27 @@ class DocumentProcessor:
                 if files:
                     logging.info(f"正在处理学号 {student_id} 的文件")
 
-                    # 先保存所有文件的JSON结果
-                    for _, recognition_result in files:
-                        self.recognizer.save_recognition_result(
-                            recognition_result,
-                            self.json_dir,
-                            student_id
-                        )
+                    # # 先保存所有文件的JSON结果
+                    # for _, recognition_result in files:
+                    #     self.recognizer.save_recognition_result(
+                    #         recognition_result,
+                    #         self.json_dir,
+                    #         student_id
+                    #     )
 
-                    # 压缩文件
-                    zip_path = self.compressor.compress_files(
-                        files,
-                        student_id,
-                        self.res_dir
-                    )
-
-                    # 重命名zip文件
                     # 使用第一个文件的识别结果作为重命名的依据
                     first_file_result = files[0][1]  # 获取第一个文件的识别结果
                     json_path = self.recognizer.save_recognition_result(
                         first_file_result,
                         self.json_dir,
                         student_id
+                    )
+
+                    # 压缩文件
+                    zip_path = self.compressor.compress_files(
+                        files,
+                        student_id,
+                        self.res_dir
                     )
 
                     # 重命名zip文件
@@ -140,6 +139,7 @@ class DocumentProcessor:
         except Exception as e:
             logging.error(f"处理压缩文件时出错: {str(e)}")
             raise
+
 
 
 def main():

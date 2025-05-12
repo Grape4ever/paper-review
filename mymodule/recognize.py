@@ -1,153 +1,10 @@
-# import os
-# import re
-#
-# import numpy as np
-#
-# from utils.excel_match import match_and_rename_excel_entry
-# from mymodule.rename import rename_file
-# from paddleocr import PaddleOCR
-# from utils.json_helper import save_json
-#
-# PAGE_NUM = 2
-# ocr = PaddleOCR(use_angle_cls=True, lang="ch", page_num=PAGE_NUM)
-#
-#
-# # 工具函数：判断 OCR 框是否在目标区域内（带误差）
-# def is_in_region(box, target_box, tolerance=15):
-#     # 获取 box 的上下左右边界
-#     box = np.array(box)
-#     box_x_min, box_y_min = box[:, 0].min(), box[:, 1].min()
-#     box_x_max, box_y_max = box[:, 0].max(), box[:, 1].max()
-#
-#     target = np.array(target_box)
-#     target_x_min, target_y_min = target[:, 0].min() - tolerance, target[:, 1].min() - tolerance
-#     target_x_max, target_y_max = target[:, 0].max() + tolerance, target[:, 1].max() + tolerance
-#
-#     return (target_x_min <= box_x_min <= target_x_max and
-#             target_y_min <= box_y_min <= target_y_max and
-#             target_x_min <= box_x_max <= target_x_max and
-#             target_y_min <= box_y_max <= target_y_max)
-#
-#
-# # 区域定义
-# THESIS_TITLE_REGIONS = [
-#     [[335.0, 525.0], [907.0, 519.0], [908.0, 561.0], [335.0, 567.0]],
-#     [[477.0, 584.0], [773.0, 584.0], [773.0, 626.0], [477.0, 626.0]],
-# ]
-# STUDENT_ID_REGION = [[574.0, 1105.0], [799.0, 1105.0], [799.0, 1135.0], [574.0, 1135.0]]
-#
-# REPORT_TITLE_REGIONS = [
-#     [[427.0, 107.0], [749.0, 107.0], [749.0, 144.0], [427.0, 144.0]],
-#     [[413.0, 159.0], [762.0, 163.0], [761.0, 200.0], [412.0, 196.0]],
-# ]
-# REPORT_ID_REGION = [[113.0, 258.0], [352.0, 258.0], [352.0, 282.0], [113.0, 282.0]]
-#
-#
-# def in_region(box, y_min, y_max):
-#     y_top = box[0][1]
-#     return y_min <= y_top <= y_max
-#
-#
-# # 提取特定区域内的文本
-# def extract_text_in_region(result, y_min, y_max):
-#     for line in result:
-#         text = line[1][0]
-#         box = line[0]
-#         if in_region(box, y_min, y_max):
-#             return text
-#     return ""
-#
-#
-# def extract_title_text(result_lines, y_min=500, y_max=700):
-#     """
-#     提取论文题目内容，支持多行合并。
-#
-#     参数：
-#         result_lines: OCR 识别结果（某一页的识别结果）
-#         y_min, y_max: 题目所在纵坐标范围
-#     返回：
-#         合并后的题目字符串
-#     """
-#     title_lines = []
-#
-#     for line in result_lines:
-#         box = line[0]
-#         text = line[1][0]
-#         y_top = min(pt[1] for pt in box)
-#         y_bottom = max(pt[1] for pt in box)
-#
-#         if y_min <= y_top <= y_max or y_min <= y_bottom <= y_max:
-#             title_lines.append((y_top, text))
-#
-#     # 按 y 坐标排序，拼接文本
-#     title_lines.sort()
-#     full_title = ''.join([line[1] for line in title_lines])
-#
-#     return full_title.strip()
-#
-#
-# # 主函数，根据文件类型执行不同操作
-#
-#
-# def process_pdf_file(pdf_path, excel_path):
-#     # print(result)
-#     filename = os.path.basename(pdf_path)
-#     if "成绩考核表" in filename:
-#         print(f"跳过识别：{filename}")
-#         return
-#
-#     result = ocr.ocr(pdf_path, cls=True)
-#     # 判断是否是查重报告
-#     for line in result:
-#
-#         text = line[1][0]
-#         y_top = line[0][0][1]
-#         if ("检测报告单" in text or "检测系统" in text) and 100 <= y_top <= 200:
-#             # 提取学号区域内容
-#             print('是查重报告')
-#             raw_text = extract_text_in_region(result, 250, 290)
-#             student_id = re.findall(r'\d{10}', raw_text)
-#             if student_id:
-#                 rename_file(pdf_path, student_id[0], 'CCBG', "pdf")
-#             return
-#
-#     # 判断是否是论文本体
-#
-#     for line in result:
-#         text = line[1][0]
-#         y_top = line[0][0][1]
-#         if ("题目" in text or "论文题目" in text) and 500 <= y_top <= 700:
-#             # 提取学号
-#             print('是论文')
-#             id_text = extract_text_in_region(result, 1100, 1140)
-#             student_id_match = re.findall(r'\d{10}', id_text)
-#             student_id = student_id_match[0] if student_id_match else ""
-#
-#             # 提取题目
-#             title = extract_title_text(result)
-#
-#             # 保存为 JSON 文件
-#             info = {
-#                 "student_id": student_id,
-#                 "title": title,
-#                 "file_type": "LW",
-#                 "origin_path": pdf_path
-#             }
-#
-#             save_json(info, f"../data/{student_id}_LW.json")
-#
-#             # 校验并重命名
-#             if match_and_rename_excel_entry(info, excel_path):
-#                 rename_file(pdf_path, student_id, "LW", suffix='pdf')
-#             return
-#
-#     print("未识别出文件类型")
-
+import logging
 from pathlib import Path
-from typing import Dict, Any, List, Tuple, Optional
+from typing import Dict, Any, List, Optional
 from paddleocr import PaddleOCR
 import re
 from utils.json_helper import JsonHandler
+from mymodule.sign import SignatureDetector
 
 
 class DocumentRecognizer:
@@ -182,6 +39,10 @@ class DocumentRecognizer:
 
     STUDENT_ID_REGION_CJKH = [
         [600.0, 384.0], [877.0, 384.0], [877.0, 419.0], [600.0, 419.0]
+    ]
+
+    SIGNUP_REGION = [
+        [852.0, 691.0], [1010.0, 691.0], [1010.0, 963.0], [852.0, 963.0]
     ]
 
     def __init__(self):
@@ -247,6 +108,38 @@ class DocumentRecognizer:
             return match.group()
         return None
 
+    def check_signature_area(self: Path, student_id: str,
+                             save_dir: Path = Path("check_results")):
+        """检查论文签名区域是否有内容"""
+        try:
+            detector = SignatureDetector()
+
+            # 检查签名区域内容（第二页）
+            result = detector.check_area_content(
+                pdf_path=self,
+                page_num=1,  # 第二页
+                threshold=0.001  # 可以调整阈值
+            )
+
+            # 保存检查结果
+            result_path = detector.save_check_result(
+                result=result,
+                save_dir=save_dir,
+                student_id=student_id
+            )
+
+            return {
+                "student_id": student_id,
+                "has_signature": result["has_content"],
+                "content_ratio": result["content_ratio"],
+                "check_time": detector.current_time,
+                "result_file": str(result_path)
+            }
+
+        except Exception as e:
+            logging.error(f"签名区域检查失败: {str(e)}")
+            raise
+
     def process_thesis(self, result: List) -> Dict[str, Any]:
         """
         处理论文本体
@@ -266,11 +159,13 @@ class DocumentRecognizer:
         student_id_text = self.extract_text_from_region(result, self.STUDENT_ID_REGION_THESIS)
         student_id = self.extract_student_id(student_id_text)
 
-        return {
-            "type": "thesis",
-            "title": cleaned_title,
-            "student_id": student_id
-        }
+        if self.check_signature_area(student_id):
+            return {
+                "type": "thesis",
+                "title": cleaned_title,
+                "student_id": student_id
+            }
+        raise Exception("毕业论文作者未签名")
 
     def process_report(self, result: List) -> Dict[str, Any]:
         """
