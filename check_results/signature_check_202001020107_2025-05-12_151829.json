@@ -1,0 +1,57 @@
+{
+  "student_id": "202001020107",
+  "check_time": "2025-05-12 15:18:29",
+  "checker": "Grape4ever",
+  "result": {
+    "has_content": true,
+    "content_ratio": 0.00760353255856853,
+    "threshold": 0.001,
+    "debug_info": {
+      "pdf_size": [
+        595.2999877929688,
+        841.9000244140625
+      ],
+      "image_size": [
+        2481,
+        3508
+      ],
+      "scale_factors": [
+        4.167646650217693,
+        4.166765528295909
+      ],
+      "original_coords": [
+        [
+          400.0,
+          500.0
+        ],
+        [
+          500.0,
+          500.0
+        ],
+        [
+          500.0,
+          600.0
+        ],
+        [
+          400.0,
+          600.0
+        ]
+      ],
+      "scaled_coords": [
+        1667,
+        2083,
+        2083,
+        2500
+      ],
+      "extracted_area_shape": [
+        417,
+        416,
+        3
+      ]
+    },
+    "extraction_info": {
+      "non_white_pixels": 1319,
+      "total_pixels": 173472
+    }
+  }
+}

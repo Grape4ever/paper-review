@@ -3,7 +3,7 @@ from pathlib import Path
 from typing import Dict, Any, List, Optional
 from paddleocr import PaddleOCR
 import re
-from utils.json_helper import JsonHandler
+from mymodule.json_helper import JsonHandler
 from mymodule.sign import SignatureDetector
 
 
@@ -47,6 +47,7 @@ class DocumentRecognizer:
 
     def __init__(self):
         """初始化OCR对象"""
+        self.current_file_path = None
         self.ocr = PaddleOCR(use_angle_cls=True, lang="ch", page_num=self.PAGE_NUM)
         self.json_handler = JsonHandler()
 
@@ -108,15 +109,25 @@ class DocumentRecognizer:
             return match.group()
         return None
 
-    def check_signature_area(self: Path, student_id: str,
-                             save_dir: Path = Path("check_results")):
-        """检查论文签名区域是否有内容"""
+    def check_signature_area(self, pdf_path: Path, student_id: str,
+                             save_dir: Path = Path("check_results")) -> dict:
+        """
+        检查论文签名区域是否有内容
+
+        Args:
+            pdf_path: PDF文件路径
+            student_id: 学号
+            save_dir: 保存目录路径
+
+        Returns:
+            dict: 检查结果
+        """
         try:
             detector = SignatureDetector()
 
             # 检查签名区域内容（第二页）
             result = detector.check_area_content(
-                pdf_path=self,
+                pdf_path=pdf_path,  # 使用传入的pdf_path参数
                 page_num=1,  # 第二页
                 threshold=0.001  # 可以调整阈值
             )
@@ -159,7 +170,12 @@ class DocumentRecognizer:
         student_id_text = self.extract_text_from_region(result, self.STUDENT_ID_REGION_THESIS)
         student_id = self.extract_student_id(student_id_text)
 
-        if self.check_signature_area(student_id):
+        signature_result = self.check_signature_area(
+            pdf_path=self.current_file_path,  # 需要在类中添加current_file_path属性
+            student_id=student_id
+        )
+
+        if signature_result["has_signature"]:
             return {
                 "type": "thesis",
                 "title": cleaned_title,
@@ -218,6 +234,7 @@ class DocumentRecognizer:
                 raise Exception("OCR识别失败")
 
             first_page_result = result[0]
+            self.current_file_path = Path(file_path)
 
             # 检查文件名是否为开题报告或成绩考核表
             file_name = file_path.name.lower()
