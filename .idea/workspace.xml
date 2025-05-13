@@ -4,32 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f02fb864-5d8d-4529-812e-3e903b3f6083" name="更改" comment="sign check test">
-      <change afterPath="$PROJECT_DIR$/check_results/signature_check_202001020107_2025-05-12_133424.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/check_results/signature_check_202001020107_2025-05-12_151829.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250512_140627.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250512_143525.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250512_151051.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250512_151619.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250512_153254.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymodule/excel_handle.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymodule/json_helper.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recognition_results/202001020107/grade_20250512_153418.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recognition_results/202001020107/ktbg_20250512_153411.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recognition_results/202001020107/ktbg_20250512_153418.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recognition_results/202001020107/report_20250512_153327.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recognition_results/202001020107/thesis_20250512_153338.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/202001020107/2324_44_14655_080901_202001020107_CCBG.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/202001020107/2324_44_14655_080901_202001020107_CL.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/202001020107/2324_44_14655_080901_202001020107_LW.pdf" afterDir="false" />
+    <list default="true" id="f02fb864-5d8d-4529-812e-3e903b3f6083" name="更改" comment="excel_handel test">
+      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250513_053459.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250513_054431.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250513_055145.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/学生论文题目.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/学生论文题目.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymodule/recognize.py" beforeDir="false" afterPath="$PROJECT_DIR$/mymodule/recognize.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymodule/sign.py" beforeDir="false" afterPath="$PROJECT_DIR$/mymodule/sign.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250512_133237.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/excel_fill.py" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250512_135643.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/excel_match.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/json_helper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/学生论文题目.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/res/学生论文题目.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymodule/excel_handle.py" beforeDir="false" afterPath="$PROJECT_DIR$/mymodule/excel_handle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymodule/rename.py" beforeDir="false" afterPath="$PROJECT_DIR$/mymodule/rename.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recognition_results/202001020107/grade_20250512_153418.json" beforeDir="false" afterPath="$PROJECT_DIR$/recognition_results/202001020107/grade_20250513_055311.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recognition_results/202001020107/ktbg_20250512_153411.json" beforeDir="false" afterPath="$PROJECT_DIR$/recognition_results/202001020107/ktbg_20250513_055303.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recognition_results/202001020107/ktbg_20250512_153418.json" beforeDir="false" afterPath="$PROJECT_DIR$/recognition_results/202001020107/ktbg_20250513_055311.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recognition_results/202001020107/report_20250512_153327.json" beforeDir="false" afterPath="$PROJECT_DIR$/recognition_results/202001020107/report_20250513_055215.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recognition_results/202001020107/thesis_20250512_153338.json" beforeDir="false" afterPath="$PROJECT_DIR$/recognition_results/202001020107/thesis_20250513_055225.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +87,7 @@
       <recent name="D:\Users\58423\Desktop\Knowledge\ThesisReviewSystem\ThesisReview\ThesisReview\test" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\58423\Desktop\Knowledge\ThesisReviewSystem\ThesisReview\ThesisReview\res" />
       <recent name="D:\Users\58423\Desktop\Knowledge\ThesisReviewSystem\ThesisReview\ThesisReview\data" />
       <recent name="D:\Users\58423\Desktop\Knowledge\ThesisReviewSystem\ThesisReview\ThesisReview\module" />
     </key>
@@ -128,7 +117,7 @@
       <workItem from="1746928743008" duration="11490000" />
       <workItem from="1747018449916" duration="5889000" />
       <workItem from="1747052210161" duration="8496000" />
-      <workItem from="1747103250555" duration="2838000" />
+      <workItem from="1747103250555" duration="7938000" />
     </task>
     <task id="LOCAL-00001" summary="example">
       <option name="closed" value="true" />
@@ -170,7 +159,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747056308806</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="excel_handel test">
+      <option name="closed" value="true" />
+      <created>1747107459013</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1747107459013</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,10 +190,11 @@
     <MESSAGE value="完善项目结构" />
     <MESSAGE value="recognize completed" />
     <MESSAGE value="sign check test" />
-    <option name="LAST_COMMIT_MESSAGE" value="sign check test" />
+    <MESSAGE value="excel_handel test" />
+    <option name="LAST_COMMIT_MESSAGE" value="excel_handel test" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ThesisReview$main.coverage" NAME="main 覆盖结果" MODIFIED="1747063969189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ThesisReview$main.coverage" NAME="main 覆盖结果" MODIFIED="1747115499461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ThesisReview$rename.coverage" NAME="rename 覆盖结果" MODIFIED="1746949873988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mymodule" />
     <SUITE FILE_PATH="coverage/ThesisReview$compress.coverage" NAME="compress 覆盖结果" MODIFIED="1746775324525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ThesisReview$test.coverage" NAME="test 覆盖结果" MODIFIED="1747023257143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />

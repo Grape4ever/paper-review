@@ -1,7 +1,7 @@
 from pathlib import Path
 from typing import Dict, Any
 import shutil
-from utils.json_helper import JsonHandler
+from mymodule.json_helper import JsonHandler
 
 
 class FileRenamer:

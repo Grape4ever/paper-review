@@ -2,8 +2,11 @@ from pathlib import Path
 from mymodule.recognize import DocumentRecognizer
 from mymodule.rename import FileRenamer
 from mymodule.compress import DocumentCompressor
+from mymodule.excel_handle import ExcelHandler
 import logging
 from datetime import datetime
+
+
 # import os
 # from paddleocr import PaddleOCR
 
@@ -13,6 +16,7 @@ class DocumentProcessor:
         self.recognizer = DocumentRecognizer()
         self.renamer = FileRenamer()
         self.compressor = DocumentCompressor()
+        self.excel_handler = ExcelHandler(Path("./res/学生论文题目.xlsx"))
 
         # 设置目录结构
         self.root_dir = Path(".")
@@ -51,6 +55,7 @@ class DocumentProcessor:
 
     def process_document(self, file_path: Path) -> bool:
 
+        global renamed_path
         try:
             logging.info(f"开始处理文件: {file_path}")
 
@@ -86,7 +91,24 @@ class DocumentProcessor:
                 )
                 logging.info(f"文件重命名完成: {renamed_path}")
 
+            # 更新Excel
+            file_type_mapping = {
+                "thesis": "thesis",
+                "report": "report",
+                "ktbg": "support"
+            }
+            doc_type = recognition_result.get('type')
+
+            if doc_type in file_type_mapping:
+                file_names = {file_type_mapping[doc_type]: renamed_path.name}
+                success, message = self.excel_handler.process_student(student_id, file_names)
+                if not success:
+                    logging.warning(f"Excel更新失败: {message}")
+                else:
+                    logging.info(f"Excel更新成功: {message}")
+
             return True
+
 
         except Exception as e:
             logging.error(f"处理文件时出错 {file_path}: {str(e)}")
@@ -141,7 +163,6 @@ class DocumentProcessor:
             raise
 
 
-
 def main():
     try:
         processor = DocumentProcessor()
@@ -164,6 +185,7 @@ def main():
 
     except Exception as e:
         print(f"程序执行出错: {str(e)}")
+
 
 if __name__ == "__main__":
     main()
