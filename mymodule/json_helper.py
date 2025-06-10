@@ -8,17 +8,7 @@ from datetime import datetime
 class JsonHandler:
     @staticmethod
     def save_to_json(data: Dict[str, Any], json_base_dir: Path, student_id: str) -> Path:
-        """
-        将数据保存到recognition_results/学号/目录下的JSON文件
 
-        Args:
-            data: 要保存的数据字典
-            json_base_dir: JSON文件的基础目录（recognition_results）
-            student_id: 学生学号
-
-        Returns:
-            保存的文件路径
-        """
         try:
             # 在recognition_results下创建学号目录
             student_dir = json_base_dir / str(student_id)
@@ -47,15 +37,7 @@ class JsonHandler:
 
     @staticmethod
     def load_from_json(file_path: Path) -> Dict[str, Any]:
-        """
-        从JSON文件加载数据
 
-        Args:
-            file_path: JSON文件路径
-
-        Returns:
-            加载的数据字典
-        """
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
                 return json.load(f)

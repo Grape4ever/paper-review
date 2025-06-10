@@ -1,25 +1,15 @@
 from pathlib import Path
 import zipfile
 import logging
+from datetime import datetime
 
 
 class DocumentCompressor:
     def __init__(self):
-        self.current_time = "2025-05-11 07:17:45"
-        self.current_user = "Grape4ever"
+        self.current_time = datetime.utcnow().strftime('%Y%m%d')
 
     def compress_files(self, files: list[tuple[Path, dict]], student_id: str, target_dir: Path) -> Path:
-        """
-        直接压缩文件（开题报告和成绩考核表）
 
-        Args:
-            files: 要压缩的文件列表，每个元素是(文件路径, 识别结果)的元组
-            student_id: 学号
-            target_dir: 目标目录
-
-        Returns:
-            压缩文件的路径
-        """
         try:
             # 确保学号目录存在
             student_dir = target_dir / str(student_id)

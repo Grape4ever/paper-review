@@ -12,6 +12,7 @@ class ExcelHandler:
         self.current_time = "2025-05-13 05:46:27"
 
         self.excel_path = Path(excel_path)
+        self.title_checked = False
 
         # 定义列映射
         self.COLUMN_MAPPING = {
@@ -70,8 +71,8 @@ class ExcelHandler:
         json_title = str(json_title).strip()
 
         # 清理标题
-        excel_title = ' '.join(excel_title.split())
-        json_title = ' '.join(json_title.split())
+        excel_title = ''.join(excel_title.split())
+        json_title = ''.join(json_title.split())
 
         if excel_title.lower() != json_title.lower():
             logging.warning(
@@ -81,14 +82,55 @@ class ExcelHandler:
 
         return True
 
-    def process_student(self, student_id: str, file_names: Dict[str, str]) -> Tuple[bool, str]:
-        """
-        处理单个学生的所有文件
+    def strict_title_check(self, student_id: str, json_path: Path) -> bool:
 
-        Args:
-            student_id: 学号
-            file_names: 文件名字典 {'thesis': 文件名, 'report': 文件名, 'support': 文件名}
-        """
+        global json
+        if self.title_checked:
+            # 如果不是第一次比对，只返回比对结果
+            row = self._find_student_row(student_id)
+            if row is None:
+                return False
+
+            try:
+                with open(json_path, 'r', encoding='utf-8') as f:
+                    import json
+                    json_data = json.load(f)
+                    json_title = json_data.get('title', '')
+                return self._compare_titles(row, json_title)
+            except Exception as e:
+                logging.error(f"读取JSON文件失败: {str(e)}")
+                return False
+        else:
+            # 第一次比对，失败就抛出异常
+            row = self._find_student_row(student_id)
+            if row is None:
+                raise ValueError(f"未找到学号为 {student_id} 的学生")
+
+            try:
+                with open(json_path, 'r', encoding='utf-8') as f:
+                    import json
+                    json_data = json.load(f)
+                    json_title = json_data.get('title', '')
+
+                if not self._compare_titles(row, json_title):
+                    raise ValueError(
+                        f"学号 {student_id} 的论文题目不匹配\n"
+                        f"Excel中的题目: {self._get_cell_value(row, self.COLUMN_MAPPING['thesis_title'])}\n"
+                        f"JSON中的题目: {json_title}"
+                    )
+
+                # 标记已经进行过题目比对
+                self.title_checked = True
+                return True
+
+            except json.JSONDecodeError as e:
+                raise ValueError(f"JSON文件格式错误: {str(e)}")
+            except Exception as e:
+                raise ValueError(f"读取识别结果失败: {str(e)}")
+
+    def process_student(self, student_id: str, file_names: Dict[str, str], json_path: Path = None) -> Tuple[bool, str]:
+
+        # 处理单个学生的所有文件
         try:
             messages = []
 
@@ -96,6 +138,15 @@ class ExcelHandler:
             row = self._find_student_row(student_id)
             if row is None:
                 return False, f"未找到学号为 {student_id} 的学生"
+
+            # 如果是论文或支撑材料，需要进行题目比对
+            if ('thesis' in file_names or 'ktbg' in file_names) and json_path is not None:
+                try:
+                    if not self.strict_title_check(student_id, json_path):
+                        return False, f"学号 {student_id} 的论文题目不匹配"
+                except ValueError as e:
+                    # 第一次比对失败，直接抛出异常终止程序
+                    raise
 
             # 更新文件名
             type_to_column = {

@@ -4,20 +4,85 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f02fb864-5d8d-4529-812e-3e903b3f6083" name="更改" comment="excel_handel test">
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250513_053459.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250513_054431.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250513_055145.log" afterDir="false" />
+    <list default="true" id="f02fb864-5d8d-4529-812e-3e903b3f6083" name="更改" comment="excel_handel test2">
+      <change afterPath="$PROJECT_DIR$/PP-OCRv5_server_det/inference.pdiparams" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PP-OCRv5_server_det/inference.pdiparams.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PP-OCRv5_server_det/inference.pdmodel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250606_064102.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250606_064729.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250606_064857.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250606_065337.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250606_065835.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250606_071353.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250606_074355.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250606_080235.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250606_080707.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250606_080918.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250606_081151.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250606_082832.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250607_130214.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250607_130723.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250607_131624.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250607_131709.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250607_132522.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250609_123447.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250609_124152.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250609_125731.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/PP-OCRv5_server_det/inference.pdiparams" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/PP-OCRv5_server_det/inference.pdiparams.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/PP-OCRv5_server_det/inference.pdmodel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/lwSignTest/202002010306_定稿论文.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/lwSignTest/2324_44_14655_080901_202240292065-LW.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/lwSignTest/8-202002010104-李乐雅-毕业论文.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/lwSignTest/8-202011100217-李奕键-毕设论文.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/学生论文题目.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/res/学生论文题目.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/check_results/signature_check_202001020107_2025-05-12_133424.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/check_results/signature_check_202001020107_2025-05-12_151829.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250510_140948.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250514_031709.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250510_141400.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250514_032029.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250510_143219.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250514_032407.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250510_143408.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250514_032500.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250511_064954.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250514_041858.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250511_065816.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250514_042207.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250511_072219.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_030826.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250511_072434.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_031609.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250511_073019.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_032350.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250511_073548.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_032839.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250511_075138.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_033219.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250511_082627.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_044754.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250512_030205.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_045229.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250512_030517.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_045811.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250512_030903.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_050629.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250512_032841.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_052537.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250512_122325.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_054214.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250512_123235.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_054625.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250512_133237.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_055154.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250512_135643.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_060358.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250512_140627.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_061224.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250512_143525.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_061419.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250512_151051.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_061649.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250512_151619.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_061855.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250512_153254.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_062254.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250513_053459.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_062626.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250513_054431.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_063457.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250513_055145.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_063747.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymodule/compress.py" beforeDir="false" afterPath="$PROJECT_DIR$/mymodule/compress.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mymodule/excel_handle.py" beforeDir="false" afterPath="$PROJECT_DIR$/mymodule/excel_handle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymodule/json_helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/mymodule/json_helper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymodule/recognize.py" beforeDir="false" afterPath="$PROJECT_DIR$/mymodule/recognize.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mymodule/rename.py" beforeDir="false" afterPath="$PROJECT_DIR$/mymodule/rename.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recognition_results/202001020107/grade_20250512_153418.json" beforeDir="false" afterPath="$PROJECT_DIR$/recognition_results/202001020107/grade_20250513_055311.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recognition_results/202001020107/ktbg_20250512_153411.json" beforeDir="false" afterPath="$PROJECT_DIR$/recognition_results/202001020107/ktbg_20250513_055303.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recognition_results/202001020107/ktbg_20250512_153418.json" beforeDir="false" afterPath="$PROJECT_DIR$/recognition_results/202001020107/ktbg_20250513_055311.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recognition_results/202001020107/report_20250512_153327.json" beforeDir="false" afterPath="$PROJECT_DIR$/recognition_results/202001020107/report_20250513_055215.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recognition_results/202001020107/thesis_20250512_153338.json" beforeDir="false" afterPath="$PROJECT_DIR$/recognition_results/202001020107/thesis_20250513_055225.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recognition_results/202001020107/grade_20250513_055311.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recognition_results/202001020107/ktbg_20250513_055303.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recognition_results/202001020107/ktbg_20250513_055311.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recognition_results/202001020107/report_20250513_055215.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recognition_results/202001020107/thesis_20250513_055225.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/202001020107/2324_44_14655_080901_202001020107_CCBG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/test/ZCCBG.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/202001020107/2324_44_14655_080901_202001020107_CL.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/202001020107/2324_44_14655_080901_202001020107_LW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/test/lwSignTest/LW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/学生论文题目.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/res/学生论文题目.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/CCBG.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,34 +127,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python.compress.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.rename.executor": "Run",
-    "Python.test.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/Users/58423/Desktop/Knowledge/ThesisReviewSystem/ThesisReview/ThesisReview/test",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.compress.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.recognize.executor&quot;: &quot;Run&quot;,
+    &quot;Python.rename.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Users/58423/Desktop/Knowledge/ThesisReviewSystem/ThesisReview/ThesisReview/test/lwSignTest&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\58423\Desktop\Knowledge\ThesisReviewSystem\ThesisReview\ThesisReview\test\lwSignTest" />
       <recent name="D:\Users\58423\Desktop\Knowledge\ThesisReviewSystem\ThesisReview\ThesisReview\test" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\58423\Desktop\Knowledge\ThesisReviewSystem\ThesisReview\ThesisReview\test\202011100217-李奕键" />
+      <recent name="D:\Users\58423\Desktop\Knowledge\ThesisReviewSystem\ThesisReview\ThesisReview\test\202240292065-王维" />
+      <recent name="D:\Users\58423\Desktop\Knowledge\ThesisReviewSystem\ThesisReview\ThesisReview\test\temp" />
+      <recent name="D:\Users\58423\Desktop\Knowledge\ThesisReviewSystem\ThesisReview\ThesisReview\test" />
       <recent name="D:\Users\58423\Desktop\Knowledge\ThesisReviewSystem\ThesisReview\ThesisReview\res" />
-      <recent name="D:\Users\58423\Desktop\Knowledge\ThesisReviewSystem\ThesisReview\ThesisReview\data" />
-      <recent name="D:\Users\58423\Desktop\Knowledge\ThesisReviewSystem\ThesisReview\ThesisReview\module" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -117,7 +186,13 @@
       <workItem from="1746928743008" duration="11490000" />
       <workItem from="1747018449916" duration="5889000" />
       <workItem from="1747052210161" duration="8496000" />
-      <workItem from="1747103250555" duration="7938000" />
+      <workItem from="1747103250555" duration="16034000" />
+      <workItem from="1747191683143" duration="5222000" />
+      <workItem from="1747708238066" duration="8428000" />
+      <workItem from="1749127213611" duration="2109000" />
+      <workItem from="1749178470365" duration="26805000" />
+      <workItem from="1749288720225" duration="5854000" />
+      <workItem from="1749471174507" duration="7853000" />
     </task>
     <task id="LOCAL-00001" summary="example">
       <option name="closed" value="true" />
@@ -167,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747107459013</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="excel_handel test2">
+      <option name="closed" value="true" />
+      <created>1747115819350</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1747115819350</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,12 +274,21 @@
     <MESSAGE value="recognize completed" />
     <MESSAGE value="sign check test" />
     <MESSAGE value="excel_handel test" />
-    <option name="LAST_COMMIT_MESSAGE" value="excel_handel test" />
+    <MESSAGE value="excel_handel test2" />
+    <option name="LAST_COMMIT_MESSAGE" value="excel_handel test2" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="result" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ThesisReview$main.coverage" NAME="main 覆盖结果" MODIFIED="1747115499461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ThesisReview$main.coverage" NAME="main 覆盖结果" MODIFIED="1749476946748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ThesisReview$rename.coverage" NAME="rename 覆盖结果" MODIFIED="1746949873988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mymodule" />
     <SUITE FILE_PATH="coverage/ThesisReview$compress.coverage" NAME="compress 覆盖结果" MODIFIED="1746775324525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ThesisReview$test.coverage" NAME="test 覆盖结果" MODIFIED="1747023257143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/ThesisReview$test.coverage" NAME="test 覆盖结果" MODIFIED="1749473667987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/ThesisReview$recognize.coverage" NAME="recognize 覆盖结果" MODIFIED="1749474086833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mymodule" />
   </component>
 </project>

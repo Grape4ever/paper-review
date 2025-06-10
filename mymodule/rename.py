@@ -16,26 +16,14 @@ class FileRenamer:
         "thesis": "LW",  # 论文
         "report": "CCBG",  # 查重报告
         "ktbg": "CL",
-        "grade": "CL"  # 支持材料
+        "grade": "CL"  # 支撑材料
     }
 
     def __init__(self):
         self.json_handler = JsonHandler()
 
     def generate_new_filename(self, json_data: Dict[str, Any], suffix: str) -> str:
-        """
-        生成新的文件名
 
-        Args:
-            json_data: JSON数据
-            suffix: 文件后缀
-
-        Returns:
-            生成的新文件名
-
-        Raises:
-            ValueError: 当缺少必要信息或文件类型未知时
-        """
         # 获取学号
         student_id = json_data.get('student_id')
         if not student_id:
@@ -57,21 +45,7 @@ class FileRenamer:
         return new_filename
 
     def rename_file(self, source_file: Path, json_file: Path, target_dir: Path) -> Path:
-        """
-        重命名文件
 
-        Args:
-            source_file: 源文件路径
-            json_file: JSON文件路径
-            target_dir: 目标目录
-
-        Returns:
-            重命名后的文件路径
-
-        Raises:
-            FileNotFoundError: 当源文件或JSON文件不存在时
-            ValueError: 当JSON数据无效时
-        """
         try:
             # 检查文件是否存在
             if not source_file.exists():
