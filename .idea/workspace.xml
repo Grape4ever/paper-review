@@ -4,39 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f02fb864-5d8d-4529-812e-3e903b3f6083" name="更改" comment="功能完善">
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/.vscode/extensions.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/jsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/assets/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/assets/global.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/assets/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/assets/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/components/ClassInfo.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/components/HelloWorld.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/components/TheWelcome.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/components/WelcomeItem.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/components/icons/IconCommunity.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/components/icons/IconDocumentation.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/components/icons/IconEcosystem.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/components/icons/IconSupport.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/components/icons/IconTooling.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/components/upload.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/router/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/views/AboutView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/views/HomeView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/views/stuLayout.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/vite.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f02fb864-5d8d-4529-812e-3e903b3f6083" name="更改" comment="flask init" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -153,7 +121,7 @@
       <workItem from="1749559306211" duration="3520000" />
       <workItem from="1749632868675" duration="4274000" />
       <workItem from="1749984202833" duration="2712000" />
-      <workItem from="1750072699718" duration="1804000" />
+      <workItem from="1750072699718" duration="2223000" />
     </task>
     <task id="LOCAL-00001" summary="example">
       <option name="closed" value="true" />
@@ -219,7 +187,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749539049072</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="flask init">
+      <option name="closed" value="true" />
+      <created>1750075430865</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1750075430865</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,7 +221,8 @@
     <MESSAGE value="excel_handel test" />
     <MESSAGE value="excel_handel test2" />
     <MESSAGE value="功能完善" />
-    <option name="LAST_COMMIT_MESSAGE" value="功能完善" />
+    <MESSAGE value="flask init" />
+    <option name="LAST_COMMIT_MESSAGE" value="flask init" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
