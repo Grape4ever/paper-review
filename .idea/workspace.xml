@@ -4,85 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f02fb864-5d8d-4529-812e-3e903b3f6083" name="更改" comment="excel_handel test2">
-      <change afterPath="$PROJECT_DIR$/PP-OCRv5_server_det/inference.pdiparams" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PP-OCRv5_server_det/inference.pdiparams.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PP-OCRv5_server_det/inference.pdmodel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250606_064102.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250606_064729.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250606_064857.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250606_065337.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250606_065835.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250606_071353.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250606_074355.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250606_080235.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250606_080707.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250606_080918.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250606_081151.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250606_082832.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250607_130214.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250607_130723.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250607_131624.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250607_131709.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250607_132522.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250609_123447.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250609_124152.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250609_125731.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/PP-OCRv5_server_det/inference.pdiparams" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/PP-OCRv5_server_det/inference.pdiparams.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/PP-OCRv5_server_det/inference.pdmodel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/lwSignTest/202002010306_定稿论文.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/lwSignTest/2324_44_14655_080901_202240292065-LW.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/lwSignTest/8-202002010104-李乐雅-毕业论文.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/lwSignTest/8-202011100217-李奕键-毕设论文.pdf" afterDir="false" />
+    <list default="true" id="f02fb864-5d8d-4529-812e-3e903b3f6083" name="更改" comment="功能完善">
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/.vscode/extensions.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/jsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/assets/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/assets/global.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/assets/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/assets/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/components/ClassInfo.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/components/HelloWorld.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/components/TheWelcome.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/components/WelcomeItem.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/components/icons/IconCommunity.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/components/icons/IconDocumentation.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/components/icons/IconEcosystem.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/components/icons/IconSupport.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/components/icons/IconTooling.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/components/upload.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/router/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/views/AboutView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/views/HomeView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/src/views/stuLayout.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThesisReviewPage/vite.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/check_results/signature_check_202001020107_2025-05-12_133424.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/check_results/signature_check_202001020107_2025-05-12_151829.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250510_140948.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250514_031709.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250510_141400.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250514_032029.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250510_143219.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250514_032407.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250510_143408.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250514_032500.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250511_064954.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250514_041858.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250511_065816.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250514_042207.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250511_072219.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_030826.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250511_072434.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_031609.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250511_073019.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_032350.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250511_073548.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_032839.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250511_075138.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_033219.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250511_082627.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_044754.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250512_030205.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_045229.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250512_030517.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_045811.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250512_030903.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_050629.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250512_032841.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_052537.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250512_122325.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_054214.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250512_123235.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_054625.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250512_133237.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_055154.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250512_135643.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_060358.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250512_140627.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_061224.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250512_143525.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_061419.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250512_151051.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_061649.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250512_151619.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_061855.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250512_153254.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_062254.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250513_053459.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_062626.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250513_054431.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_063457.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/document_processing_20250513_055145.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/document_processing_20250606_063747.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymodule/compress.py" beforeDir="false" afterPath="$PROJECT_DIR$/mymodule/compress.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymodule/excel_handle.py" beforeDir="false" afterPath="$PROJECT_DIR$/mymodule/excel_handle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymodule/json_helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/mymodule/json_helper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymodule/recognize.py" beforeDir="false" afterPath="$PROJECT_DIR$/mymodule/recognize.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymodule/rename.py" beforeDir="false" afterPath="$PROJECT_DIR$/mymodule/rename.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recognition_results/202001020107/grade_20250513_055311.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recognition_results/202001020107/ktbg_20250513_055303.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recognition_results/202001020107/ktbg_20250513_055311.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recognition_results/202001020107/report_20250513_055215.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recognition_results/202001020107/thesis_20250513_055225.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/202001020107/2324_44_14655_080901_202001020107_CCBG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/test/ZCCBG.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/202001020107/2324_44_14655_080901_202001020107_CL.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/202001020107/2324_44_14655_080901_202001020107_LW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/test/lwSignTest/LW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/学生论文题目.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/res/学生论文题目.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/CCBG.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +98,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Pycharm\\PyCharm 2023.3.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -154,11 +108,11 @@
       <recent name="D:\Users\58423\Desktop\Knowledge\ThesisReviewSystem\ThesisReview\ThesisReview\test" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\58423\Desktop\Knowledge\ThesisReviewSystem\ThesisReview\ThesisReview\ThesisReviewPage\src\components" />
+      <recent name="D:\Users\58423\Desktop\Knowledge\ThesisReviewSystem\ThesisReview\ThesisReview\ThesisReviewPage\src\assets" />
+      <recent name="D:\Users\58423\Desktop\Knowledge\ThesisReviewSystem\ThesisReview\ThesisReview\ThesisReviewPage\src\views" />
+      <recent name="D:\Users\58423\Desktop\Knowledge\ThesisReviewSystem\ThesisReview\ThesisReview\ThesisReviews\src\components" />
       <recent name="D:\Users\58423\Desktop\Knowledge\ThesisReviewSystem\ThesisReview\ThesisReview\test\202011100217-李奕键" />
-      <recent name="D:\Users\58423\Desktop\Knowledge\ThesisReviewSystem\ThesisReview\ThesisReview\test\202240292065-王维" />
-      <recent name="D:\Users\58423\Desktop\Knowledge\ThesisReviewSystem\ThesisReview\ThesisReview\test\temp" />
-      <recent name="D:\Users\58423\Desktop\Knowledge\ThesisReviewSystem\ThesisReview\ThesisReview\test" />
-      <recent name="D:\Users\58423\Desktop\Knowledge\ThesisReviewSystem\ThesisReview\ThesisReview\res" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -193,6 +147,13 @@
       <workItem from="1749178470365" duration="26805000" />
       <workItem from="1749288720225" duration="5854000" />
       <workItem from="1749471174507" duration="7853000" />
+      <workItem from="1749538672331" duration="4016000" />
+      <workItem from="1749554352974" duration="248000" />
+      <workItem from="1749554614237" duration="1032000" />
+      <workItem from="1749559306211" duration="3520000" />
+      <workItem from="1749632868675" duration="4274000" />
+      <workItem from="1749984202833" duration="2712000" />
+      <workItem from="1750072699718" duration="1804000" />
     </task>
     <task id="LOCAL-00001" summary="example">
       <option name="closed" value="true" />
@@ -250,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747115819350</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="功能完善">
+      <option name="closed" value="true" />
+      <created>1749539049072</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1749539049072</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,7 +244,8 @@
     <MESSAGE value="sign check test" />
     <MESSAGE value="excel_handel test" />
     <MESSAGE value="excel_handel test2" />
-    <option name="LAST_COMMIT_MESSAGE" value="excel_handel test2" />
+    <MESSAGE value="功能完善" />
+    <option name="LAST_COMMIT_MESSAGE" value="功能完善" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
