@@ -47,7 +47,6 @@
             <!-- 顶部提示栏 -->
             <div class="alert-bar">
             欢迎老师！
-            
             </div>
             <!-- 添加参数输入组件 -->
             <div class="params-input">
@@ -69,8 +68,29 @@
                     <input v-model="params.major_code" placeholder="例如: 080901"/>
                 </div>
                 <div class="input-group">
-                    <button @click="updateParams" class="update-params-btn">启动</button>
+                    <button @click="reviewAllFiles" class="update-params-btn">启动</button>
                 </div>
+            </div>
+            <div v-if="reviewDetails && reviewDetails.length" class="review-details">
+            <h3>审核明细：</h3>
+            <table>
+                <thead>
+                <tr>
+                    <th>文件名</th>
+                    <th>状态</th>
+                    <th>信息</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr v-for="item in reviewDetails" :key="item.file">
+                    <td>{{ item.file }}</td>
+                    <td :style="{color: item.status === 'success' ? 'green' : 'red'}">
+                    {{ item.status === 'success' ? '通过' : '失败' }}
+                    </td>
+                    <td><pre>{{ item.message }}</pre></td>
+                </tr>
+                </tbody>
+            </table>
             </div>
         </div>
 
@@ -86,12 +106,12 @@ import { ref } from "vue";
 const fileInput = ref(null);
 const folderInput = ref(null);
 const selectedFiles = ref([]);
-const downloadUrl = ref("");
-const downloadName = ref("");
+// const downloadUrl = ref("");
+// const downloadName = ref("");
 const error = ref("");
 const loading = ref(false);
 const uploadResult = ref("");
-
+const reviewDetails = ref([]);
 const params = ref({
     academic_year: "2324",
     province_code: "44",
@@ -131,26 +151,6 @@ function onFolderChange(e) {
   error.value = "";
 }
 
-async function updateParams() {
-    try {
-        const response = await fetch("/api/rename-params", {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(params.value)
-        });
-
-        const data = await response.json();
-        if (response.ok) {
-            alert("参数格式无误！");
-        } else {
-            error.value = data.error || "参数更新失败";
-        }
-    } catch (e) {
-        error.value = "网络错误";
-    }
-}
 
 async function uploadFiles() {
   if (!selectedFiles.value.length) return;
@@ -186,7 +186,8 @@ async function uploadFiles() {
 async function reviewAllFiles() {
   try {
     loading.value = true;
-    const resp = await fetch('/api/review-unload', {
+    error.value = "";
+    const resp = await fetch('/api/review-upload', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -198,11 +199,15 @@ async function reviewAllFiles() {
     });
     const data = await resp.json();
     if (resp.ok) {
-      alert(data.message);
-      // 或展示 data.detail
+      uploadResult.value = data.message;
+      reviewDetails.value = data.details || [];
     } else {
       error.value = data.error || "处理失败";
+      reviewDetails.value = [];
     }
+  } catch (e) {
+    error.value = "网络错误";
+    reviewDetails.value = [];
   } finally {
     loading.value = false;
   }
@@ -356,5 +361,18 @@ async function reviewAllFiles() {
 .upload-btn:disabled {
     background-color: #ccc;
     cursor: not-allowed;
+}
+
+.review-details {
+  margin: 20px 0;
+}
+.review-details table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.review-details th, .review-details td {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  text-align: left;
 }
 </style>

@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f02fb864-5d8d-4529-812e-3e903b3f6083" name="更改" comment="flask init">
+    <list default="true" id="f02fb864-5d8d-4529-812e-3e903b3f6083" name="更改" comment="flask review">
+      <change afterPath="$PROJECT_DIR$/logs/document_processing_20250617_041550.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recognition_results/202002010104/grade_20250617_041616.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recognition_results/202002010104/ktbg_20250617_041602.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recognition_results/202002010104/ktbg_20250617_041623.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recognition_results/202002010104/thesis_20250617_041619.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThesisReviewPage/src/views/stuLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ThesisReviewPage/src/views/stuLayout.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymodule/rename.py" beforeDir="false" afterPath="$PROJECT_DIR$/mymodule/rename.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/202002010104/2324_44_14655_080901_202002010104_CL.zip" beforeDir="false" afterPath="$PROJECT_DIR$/res/202002010104/2324_44_14655_080901_202002010104_CL.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymodule/recognize.py" beforeDir="false" afterPath="$PROJECT_DIR$/mymodule/recognize.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/学生论文题目.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/res/学生论文题目.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +76,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
     &quot;ts.external.directory.path&quot;: &quot;D:\\Pycharm\\PyCharm 2023.3.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -130,7 +134,10 @@
       <workItem from="1749984202833" duration="2712000" />
       <workItem from="1750072699718" duration="3265000" />
       <workItem from="1750076752695" duration="1491000" />
-      <workItem from="1750127950366" duration="3717000" />
+      <workItem from="1750127950366" duration="5037000" />
+      <workItem from="1750144346662" duration="534000" />
+      <workItem from="1750144906268" duration="1862000" />
+      <workItem from="1750161438490" duration="399000" />
     </task>
     <task id="LOCAL-00001" summary="example">
       <option name="closed" value="true" />
@@ -212,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750076027777</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="flask review">
+      <option name="closed" value="true" />
+      <created>1750143020852</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1750143020852</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +266,8 @@
     <MESSAGE value="excel_handel test2" />
     <MESSAGE value="功能完善" />
     <MESSAGE value="flask init" />
-    <option name="LAST_COMMIT_MESSAGE" value="flask init" />
+    <MESSAGE value="flask review" />
+    <option name="LAST_COMMIT_MESSAGE" value="flask review" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

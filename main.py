@@ -7,6 +7,7 @@ from mymodule.excel_handle import ExcelHandler
 import logging
 from datetime import datetime
 
+BASE_DIR = Path(__file__).resolve().parent
 
 class DocumentProcessor:
     def __init__(self, academic_year: str = "2324", 
@@ -21,13 +22,13 @@ class DocumentProcessor:
             major_code=major_code
         )
         self.compressor = DocumentCompressor()
-        self.excel_handler = ExcelHandler(Path("./res/学生论文题目.xlsx"))
+        self.excel_handler = ExcelHandler(BASE_DIR / "res" / "学生论文题目.xlsx")
 
         # 设置目录结构
         self.root_dir = Path(".")
         self.res_dir = self.root_dir / "res"  # 重命名文件目录
         self.json_dir = self.root_dir / "recognition_results"
-        self.input_dir = self.root_dir / "api/uploads"  # 输入文件目录
+        self.input_dir = BASE_DIR / "api" / "uploads"  # 输入文件目录
         self.log_dir = self.root_dir / "logs"
         self.compress_files = {}  # 学号 -> 文件列表的映射
 
@@ -183,6 +184,7 @@ def process_single_file(file_path, params):
     return False
 
 def batch_review_upload(params=None):
+    from pathlib import Path
 
     if params is None:
         params = {
@@ -192,21 +194,49 @@ def batch_review_upload(params=None):
             'major_code': "080901"
         }
     processor = DocumentProcessor(**params)
-    pdf_files = list(processor.input_dir.rglob("*.pdf"))
-    success_list, fail_list = [], []
+    upload_dir = processor.input_dir.resolve()
+    pdf_files = list(upload_dir.rglob("*.pdf"))
+    results = []  # 存储每个文件的详细结果
+
     for pdf_file in pdf_files:
-        if processor.process_document(pdf_file):
-            success_list.append(str(pdf_file))
-        else:
-            fail_list.append(str(pdf_file))
+        # 只保留 uploads 下的相对路径
+        try:
+            rel_path = str(pdf_file.relative_to(upload_dir))
+        except Exception:
+            rel_path = pdf_file.name  # fallback
+
+        # 捕获处理中的日志
+        log_msgs = []
+        try:
+            success = processor.process_document(pdf_file)
+
+            if success:
+                results.append({
+                    "file": rel_path,
+                    "status": "success",
+                    "message": "审核通过\n" 
+                })
+            else:
+                results.append({
+                    "file": rel_path,
+                    "status": "fail",
+                    "message": "未通过：\n"
+                })
+        except Exception as e:
+           
+            results.append({
+                "file": rel_path,
+                "status": "fail",
+                "message": str(e)
+            })
     processor.process_compressed_files()
     return {
         "total": len(pdf_files),
-        "success_count": len(success_list),
-        "fail_count": len(fail_list),
-        "success_files": success_list,
-        "fail_files": fail_list
+        "success_count": len([r for r in results if r["status"] == "success"]),
+        "fail_count": len([r for r in results if r["status"] == "fail"]),
+        "details": results
     }
+
 def main():
     try:
         params = {

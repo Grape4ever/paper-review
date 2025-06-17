@@ -74,7 +74,7 @@ class DocumentRecognizer:
 
         # 去除"题目："或"题目: "或"题目 "
         title = re.sub(r'.*题目[：: ]?\s*', '', title)
-        print("title:" + title)
+        # print("title:" + title)
         # 去除换行和多余空格
         title = ''.join(title.split())
 
@@ -122,12 +122,12 @@ class DocumentRecognizer:
         # 拼接所有文本内容
         all_text = " ".join([line[1][0] for line in second_page_result if line[1][0].strip()])
         # 正则匹配 签名： 和 日期 之间的内容，可跨行
-        print("all_text", all_text)
+        # print("all_text", all_text)
         pattern = r"签名\s*[:：]\s*(.*?)\s*日期"
         match = re.search(pattern, all_text, re.DOTALL)
         if match:
             content = match.group(1).strip()
-            print("content" + content)
+            # print("content" + content)
             # 判断内容是否为空（可以根据需要添加更严格的判断，比如长度、是否全是标点等）
             return bool(content)
         else:
@@ -137,9 +137,9 @@ class DocumentRecognizer:
     def process_thesis(self, result: List) -> Dict[str, Any]:
 
         text = self.extract_text_from_region(result[0], self.THESIS_TITLE_REGIONS)
-        print(text)
+        # print(text)
         cleaned_title = self.clean_thesis_title(text)
-        print(cleaned_title)
+        # print(cleaned_title)
         # 提取学号s
         student_id_text = self.extract_text_from_region(result[0], self.STUDENT_ID_REGION_THESIS)
 
@@ -163,8 +163,8 @@ class DocumentRecognizer:
 
         student_id_text = self.extract_text_from_region(result, self.STUDENT_ID_REGION_REPORT)
         student_id = self.extract_student_id(student_id_text)
-        print(student_id_text)
-        print(student_id)
+        # print(student_id_text)
+        # print(student_id)
 
         return {
             "type": "report",
@@ -225,7 +225,7 @@ class DocumentRecognizer:
 
             # 检查是否为论文本体
             text = self.extract_text_from_region(first_page_result, self.THESIS_TITLE_REGIONS)
-            print("检查是否为论文本体 text:"+text)
+           
             skip_words = ["任务书", "中期检查", "评审", "答辩", "进展情况", "过程记录"]
             if any(word in text for word in skip_words):
                 raise Exception(f"检测到需跳过的关键词: {', '.join([w for w in skip_words if w in text])}")
@@ -234,14 +234,14 @@ class DocumentRecognizer:
 
             # 检查是否为查重报告
             report_text = self.extract_text_from_region(first_page_result, self.REPORT_TITLE_REGION)
-            print("report_text:" + report_text)
+            # print("report_text:" + report_text)
             if "检测" in report_text:
                 return self.process_report(first_page_result)
 
             return {"type": "unknown"}
 
         except Exception as e:
-            raise Exception(f"文档识别失败: {str(e)}")
+            raise Exception(str(e))
 
     def save_recognition_result(self, result: Dict[str, Any], output_dir: Path, student_id: str) -> Path:
 
