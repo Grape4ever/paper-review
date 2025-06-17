@@ -9,9 +9,17 @@ from datetime import datetime
 
 
 class DocumentProcessor:
-    def __init__(self):
+    def __init__(self, academic_year: str = "2324", 
+                 province_code: str = "44",
+                 unit_code: str = "14655", 
+                 major_code: str = "080901"):
         self.recognizer = DocumentRecognizer()
-        self.renamer = FileRenamer()
+        self.renamer = FileRenamer(
+            academic_year=academic_year,
+            province_code=province_code,
+            unit_code=unit_code,
+            major_code=major_code
+        )
         self.compressor = DocumentCompressor()
         self.excel_handler = ExcelHandler(Path("./res/学生论文题目.xlsx"))
 
@@ -19,7 +27,7 @@ class DocumentProcessor:
         self.root_dir = Path(".")
         self.res_dir = self.root_dir / "res"  # 重命名文件目录
         self.json_dir = self.root_dir / "recognition_results"
-        self.input_dir = self.root_dir / "test/李乐雅"  # 输入文件目录
+        self.input_dir = self.root_dir / "api/uploads"  # 输入文件目录
         self.log_dir = self.root_dir / "logs"
         self.compress_files = {}  # 学号 -> 文件列表的映射
 
@@ -161,25 +169,54 @@ class DocumentProcessor:
             raise
 
 
+def process_single_file(file_path, params):
+    processor = DocumentProcessor(
+        academic_year=params['academic_year'],
+        province_code=params['province_code'],
+        unit_code=params['unit_code'],
+        major_code=params['major_code']
+    )
+    
+    if processor.process_document(Path(file_path)):
+        processor.process_compressed_files()
+        return True
+    return False
+
+def batch_review_upload(params=None):
+
+    if params is None:
+        params = {
+            'academic_year': "2324",
+            'province_code': "44",
+            'unit_code': "14655",
+            'major_code': "080901"
+        }
+    processor = DocumentProcessor(**params)
+    pdf_files = list(processor.input_dir.rglob("*.pdf"))
+    success_list, fail_list = [], []
+    for pdf_file in pdf_files:
+        if processor.process_document(pdf_file):
+            success_list.append(str(pdf_file))
+        else:
+            fail_list.append(str(pdf_file))
+    processor.process_compressed_files()
+    return {
+        "total": len(pdf_files),
+        "success_count": len(success_list),
+        "fail_count": len(fail_list),
+        "success_files": success_list,
+        "fail_files": fail_list
+    }
 def main():
     try:
-        processor = DocumentProcessor()
-
-        pdf_files = list(processor.input_dir.glob("*.pdf"))
-        if not pdf_files:
-            print("没有找到需要处理的PDF文件")
-            return
-
-        print(f"找到 {len(pdf_files)} 个PDF文件待处理")
-        for pdf_file in pdf_files:
-            if processor.process_document(pdf_file):
-                print(f"文件处理成功: {pdf_file}")
-            else:
-                print(f"文件处理失败: {pdf_file}")
-
-        processor.process_compressed_files()
-        print("所有文件处理完成")
-
+        params = {
+            'academic_year': "2324",
+            'province_code': "44",
+            'unit_code': "14655",
+            'major_code': "080901"
+        }
+        result = batch_review_upload(params)
+        print(f"共找到{result['total']}个PDF，成功{result['success_count']}个，失败{result['fail_count']}个")
     except Exception as e:
         print(f"程序执行出错: {str(e)}")
 

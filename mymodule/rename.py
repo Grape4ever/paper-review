@@ -6,11 +6,6 @@ from mymodule.json_helper import JsonHandler
 
 class FileRenamer:
 
-    ACADEMIC_YEAR = "2324"  # 学年度
-    PROVINCE_CODE = "44"  # 省市代码
-    UNIT_CODE = "14655"  # 单位代码
-    MAJOR_CODE = "080901"  # 专业代码
-
     # 文件类型映射
     FILE_TYPE_MAPPING = {
         "thesis": "LW",  # 论文
@@ -19,8 +14,15 @@ class FileRenamer:
         "grade": "CL"  # 支撑材料
     }
 
-    def __init__(self):
+    def __init__(self, 
+                 academic_year: str = "2324", 
+                 province_code: str = "44",
+                 unit_code: str = "14655", major_code: str = "080901"):
         self.json_handler = JsonHandler()
+        self.academic_year = academic_year  # 学年度
+        self.province_code = province_code  # 省市代码
+        self.unit_code = unit_code  # 单位代码
+        self.major_code = major_code  # 专业代码
 
     def generate_new_filename(self, json_data: Dict[str, Any], suffix: str) -> str:
 
@@ -40,7 +42,7 @@ class FileRenamer:
             raise ValueError(f"未知的文件类型: {doc_type}")
 
         # 构造新文件名
-        new_filename = f"{self.ACADEMIC_YEAR}_{self.PROVINCE_CODE}_{self.UNIT_CODE}_{self.MAJOR_CODE}_{student_id}_{file_type}.{suffix}"
+        new_filename = f"{self.academic_year}_{self.province_code}_{self.unit_code}_{self.major_code}_{student_id}_{file_type}.{suffix}"
 
         return new_filename
 
